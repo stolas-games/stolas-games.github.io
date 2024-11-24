@@ -5,34 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stolas Production</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="/js/main.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="/assets/images/logo.png" alt="Stolas Production Logo">
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to <span>Stolas Production</span></h1>
+            <p>Transforming ideas into reality with creativity and innovation.</p>
+            <a href="/pages/projects" class="btn-primary">Explore Our Projects</a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/pages/about">About</a></li>
-                <li><a href="/pages/projects">Projects</a></li>
-                <li><a href="/pages/contact">Contact</a></li>
-                <li><a href="/auth/login">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div class="hero-image">
+            <img src="/assets/images/hero.png" alt="Creative Work">
+        </div>
+    </section>
 
-    <main>
-        <section class="hero">
-            <h1>Welcome to Stolas Production</h1>
-            <p>Where creativity meets innovation!</p>
-            <button onclick="navigateTo('/pages/projects')">Explore Projects</button>
-        </section>
-    </main>
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-content">
+            <h2>Who We Are</h2>
+            <p>At Stolas Production, we specialize in providing unique and high-quality solutions for creative projects. From music to tech, we are your trusted partner.</p>
+            <a href="/pages/about" class="btn-secondary">Learn More</a>
+        </div>
+        <div class="about-image">
+            <img src="/assets/images/about.png" alt="About Stolas">
+        </div>
+    </section>
 
-    <footer>
-        <p>© 2024 Stolas Production. All rights reserved.</p>
-    </footer>
+    <!-- Featured Projects -->
+    <section class="projects-section">
+        <h2>Our Latest Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="/assets/images/project1.png" alt="Project 1">
+                <h3>Project Alpha</h3>
+                <p>An innovative platform for connecting creators and their audience.</p>
+            </div>
+            <div class="project-card">
+                <img src="/assets/images/project2.png" alt="Project 2">
+                <h3>Project Lumina</h3>
+                <p>A cutting-edge music experience like no other.</p>
+            </div>
+            <div class="project-card">
+                <img src="/assets/images/project3.png" alt="Project 3">
+                <h3>Project Nova</h3>
+                <p>Transforming ideas into digital masterpieces.</p>
+            </div>
+        </div>
+        <a href="/pages/projects" class="btn-primary">View All Projects</a>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
 </body>
 </html>
