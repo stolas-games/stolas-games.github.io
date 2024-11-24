@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header id="header"></header>
+
+    <main class="error-page">
+        <div class="error-container">
+            <h1 class="error-title">404</h1>
+            <p class="error-message">Oops! The page you're looking for doesn't exist.</p>
+            <p>It might have been moved, deleted, or perhaps it never existed in the first place.</p>
+            <a href="/" class="btn btn-primary">Go Back Home</a>
+        </div>
+        <div class="error-image">
+            <img src="/assets/images/404-illustration.png" alt="404 Error Illustration">
+        </div>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script>
+        fetch("/header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+</body>
+</html>
