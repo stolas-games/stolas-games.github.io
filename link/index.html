@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stolas Production - Redirecting...</title>
+    <link rel="stylesheet" href=".../css/style.css">
+    <style>
+        /* Center the box on the page */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            text-align: center;
+            padding: 40px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .box h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .box p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Countdown animation */
+        .countdown {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ff4757;
+        }
+
+        /* Fade-in effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Animation for countdown numbers */
+        .countdown-number {
+            animation: countdownAnim 3s linear;
+        }
+
+        @keyframes countdownAnim {
+            0% { content: "3"; }
+            33% { content: "2"; }
+            66% { content: "1"; }
+            100% { content: "0"; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h1>Accessing the site in:</h1>
+        <p class="countdown" id="countdown">3</p>
+    </div>
+
+    <script>
+        let countdown = document.getElementById("countdown");
+        let timer = 3;
+
+        const countdownInterval = setInterval(() => {
+            timer--;
+            countdown.innerHTML = timer;
+            if (timer === 0) {
+                clearInterval(countdownInterval);
+                window.location.href = "https://stolas-production.github.io"; // Redirect to homepage after 3 seconds
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
