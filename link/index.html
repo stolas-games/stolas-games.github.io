@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stolas Production - Redirecting...</title>
-    <link rel="stylesheet" href=".../css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <style>
         /* Center the box on the page */
         body {
@@ -25,23 +25,32 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             animation: fadeIn 1s ease-out;
+            width: 80%;
+            max-width: 600px;
         }
 
         .box h1 {
-            font-size: 24px;
+            font-size: 28px;
             margin-bottom: 20px;
+            font-weight: bold;
         }
 
         .box p {
             font-size: 18px;
             margin-bottom: 20px;
+            line-height: 1.5;
         }
 
-        /* Countdown animation */
-        .countdown {
-            font-size: 36px;
+        .box .countdown {
+            font-size: 48px;
             font-weight: bold;
             color: #ff4757;
+        }
+
+        .box .info-text {
+            font-size: 16px;
+            margin-top: 20px;
+            color: #ddd;
         }
 
         /* Fade-in effect */
@@ -53,30 +62,23 @@
                 opacity: 1;
             }
         }
-
-        /* Animation for countdown numbers */
-        .countdown-number {
-            animation: countdownAnim 3s linear;
-        }
-
-        @keyframes countdownAnim {
-            0% { content: "3"; }
-            33% { content: "2"; }
-            66% { content: "1"; }
-            100% { content: "0"; }
-        }
     </style>
 </head>
 <body>
 
     <div class="box">
-        <h1>Accessing the site in:</h1>
-        <p class="countdown" id="countdown">3</p>
+        <h1>Accessing Stolas Production...</h1>
+        <p>Thank you for visiting Stolas Production! We are preparing to redirect you to our main website. Please wait for a moment.</p>
+        
+        <p>Accessing the site in: <span class="countdown" id="countdown">3</span> seconds</p>
+
+        <p class="info-text">If you experience any issues or delays, feel free to contact us at <strong>contact@stolas-production.com</strong>.</p>
+        <p class="info-text">Stolas Production is an innovative company bringing together creative projects that inspire and innovate.</p>
     </div>
 
     <script>
         let countdown = document.getElementById("countdown");
-        let timer = 3;
+        let timer = 5;
 
         const countdownInterval = setInterval(() => {
             timer--;
